@@ -1,0 +1,6 @@
+<div class="tagcloud">
+  <%- partial("_partial/tagcloud") %>
+</div>
+<div class="archive">
+  <%- partial("_partial/post-timeline", { posts: site.posts.sort("date", "desc") }) %>
+</div>

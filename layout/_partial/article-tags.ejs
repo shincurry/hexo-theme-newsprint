@@ -1,0 +1,4 @@
+<span class="fa fa-tags"></span>
+<% page.tags.forEach(function(tag){ %>
+    <a href="<%= config.root + tag.path %>">#<%- tag.name %></a>
+<% }); %>

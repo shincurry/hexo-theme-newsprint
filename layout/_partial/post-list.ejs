@@ -1,0 +1,17 @@
+<%
+    var icons = ['icon-eva-亚当', 'icon-eva-莉莉丝', 'icon-eva-水天使', 'icon-eva-昼天使', 'icon-eva-雷天使', 'icon-eva-鱼天使', 'icon-eva-音乐天使', 'icon-eva-胎天使', 'icon-eva-雨天使', 'icon-eva-空天使', 'icon-eva-恐怖天使', 'icon-eva-夜天使', 'icon-eva-霞天使', 'icon-eva-力天使', 'icon-eva-鸟天使', 'icon-eva-子宫天使', 'icon-eva-自由天使']
+    .sort(() => (Math.random()>.5 ? -1 : 1));
+%>
+
+<ul class="list">
+  <% posts.forEach(function(post, index){ %>
+    <li class="item">
+      <% if (icon) { %>
+        <span class="icon <%= icons[index] %>"></span>
+      <% } %>
+      <a class="title" href="<%- config.root %><%- post.path %>"><%- post.title %></a>
+      <%- partial('_partial/fav', { page: post })%>
+      <span class="date"><%- post.date.format("YYYY-MM-DD") %></span>
+    </li>
+  <% }) %>
+</ul>

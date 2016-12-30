@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<%
+var title = config.title;
+
+if (is_post() || is_page()) {
+  title += ' | ' + page.title
+} else if (is_archive()) {
+  title += ' | ' + __('archives')
+} else if (is_category()) {
+  title += ' | ' + page.category
+} else if (is_tag()) {
+  title += ' | ' + page.tag
+} else {
+  if (config.subtitle) {
+    title = ' | ' + config.subtitle
+  }
+}
+%>
+<title><%= title %></title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<%- open_graph({ twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.facebook }) %>
+<% if (theme.rss){ %>
+  <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+<% } %>
+<% if (theme.favicon){ %>
+  <link rel="shortcut icon" href="<%- theme.favicon %>">
+  <link rel="apple-touch-icon" href="<%- theme.apple_touch_favicon %>">
+<% } %>
+<meta name="theme-color" content="#f3f2ee">
+<% if (!theme.public) { %>
+  <meta name="robots" content="noindex,nofollow" />
+<% } %>
+
+<%- css('css/han.min') %>
+<%- css('css/font-awesome.min') %>
+<%- css('css/eva-icon') %>
+<%- css('css/newsprint.min') %>
+
+<%- js('js/manga-image') %>

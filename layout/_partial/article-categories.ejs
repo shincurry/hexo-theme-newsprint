@@ -1,0 +1,4 @@
+<span class="fa fa-sitemap"></span>
+<% page.categories.forEach(function(category) { %>
+    <a href="<%= config.root + category.path %>"><%- category.name %></a>
+<% }) %>

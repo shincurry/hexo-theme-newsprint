@@ -1,0 +1,18 @@
+## 主页列表长度
+index_list: 8
+
+## Favicon
+favicon: /favicon.ico
+apple_touch_favicon: /favicon.ico
+
+## 禁止搜索引擎收录
+public: false
+
+# 社交信息
+twitter: 
+facebook: 
+google_plus:
+
+  
+# Google Analytics
+google_analytics: 

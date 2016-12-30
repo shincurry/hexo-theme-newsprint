@@ -1,0 +1,12 @@
+<div class="category">
+  <h2>
+    <span class="fa fa-sitemap"></span>
+    <%= page.category %>
+  </h2>
+  <%
+    var posts = site.posts.filter((post) =>
+      post.categories.filter((category) => (category.name == page.category)).length
+    )
+  %>
+  <%- partial("_partial/post-timeline", { posts: posts.sort("date", "desc") }) %>
+</div>

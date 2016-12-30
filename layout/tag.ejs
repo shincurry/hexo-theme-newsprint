@@ -1,0 +1,13 @@
+<div class="tag">
+  <h2>
+    <span class="fa fa-tags"></span>
+    <%= page.tag %>
+  </h2>
+  <hr>
+  <%
+    var posts = site.posts.filter((post) =>
+      post.tags.filter((tag) => (tag.name == page.tag)).length
+    )
+  %>
+  <%- partial("_partial/post-list", { posts: posts.sort("date", "desc"), icon: true }) %>
+</div>

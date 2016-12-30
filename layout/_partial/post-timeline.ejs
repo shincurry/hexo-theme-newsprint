@@ -1,0 +1,27 @@
+<ul class="timeline">
+  <%
+    var data = []
+    posts.forEach(function(post) {
+      var date = post.date.format('YYYY-MM');
+      var filtered = data.filter(function(d) {
+        var flag = (d.date == date)
+        if (flag) d.posts.push(post);
+        return flag
+      });
+      if (filtered.length == 0) {
+        data.push({
+          date: date,
+          posts: [post]
+        });
+      }
+    });
+  %>
+  <% data.forEach(function(item){ %>
+    <li>
+      <p class="timeline-date"><%= item.date %></p>
+      <div class="timeline-content">
+        <%- partial("_partial/post-list", { posts: item.posts, icon: false }) %>
+      </div>
+    </li>
+  <% }) %>
+</ul>

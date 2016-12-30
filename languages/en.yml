@@ -1,0 +1,7 @@
+index:
+    archives: 'Archives'
+article:
+    tags: 'Tags'
+    categories: 'Categories'
+    date: '%s-%s-%s'
+copyright: 'Copyright'

@@ -1,0 +1,6 @@
+archives: '归档'
+article:
+    tags: '标签'
+    categories: '分类'
+    date: '%s 年 %s 月 %s 日'
+copyright: '版权所有'
