@@ -36,6 +36,12 @@ a {
     text-decoration: none;
     color: gray;
 }
+hr {
+        border: 0;
+        height: 1px;
+        background: #333;
+        background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    }
 
 /*=====  End of general  ======*/
 
@@ -78,11 +84,11 @@ a {
 }
 .index {
     position: relative;
-    left: 41px;
+    // left: 41px;
 }
 .archive {
     position: relative;
-    left: 31px;
+    // left: 31px;
 }
 
 .list {
@@ -199,8 +205,12 @@ article {
         display: block;
         margin: 0 auto;
     }
-    #footnotelist {
+    .footnotes {
         font-size: 10px;
+
+        .footnotes-list li p {
+            margin: 0;
+        }
     }
 }
 
@@ -210,12 +220,7 @@ article {
     a {
         color: $theme-color;
     }
-    hr {
-        border: 0;
-        height: 1px;
-        background: #333;
-        background-image: linear-gradient(to right, #ccc, #333, #ccc);
-    }
+    
     .title .icon {
         font-size: 38px;
         top: 5px;

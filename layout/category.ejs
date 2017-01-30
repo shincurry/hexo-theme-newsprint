@@ -8,5 +8,6 @@
       post.categories.filter((category) => (category.name == page.category)).length
     )
   %>
+  <hr>
   <%- partial("_partial/post-timeline", { posts: posts.sort("date", "desc") }) %>
 </div>

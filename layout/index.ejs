@@ -1,4 +1,5 @@
 <div class="index">
+  <hr>
   <%- partial("_partial/post-list", { posts: site.posts.sort("date", "desc").limit(theme.index_list), icon: true }) %>
 </div>
 <div class="archives">
