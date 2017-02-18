@@ -1,4 +1,4 @@
-# hexo-newsprint
+# hexo-theme-newsprint
 
 Hexo 印刷风格主题，这套主题适合于主要为中文、日文内容的网站。
 

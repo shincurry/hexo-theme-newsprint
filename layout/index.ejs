@@ -1,6 +1,7 @@
 <div class="index">
   <hr>
   <%- partial("_partial/post-list", { posts: site.posts.sort("date", "desc").limit(theme.index_list), icon: true }) %>
+  <hr>
 </div>
 <div class="archives">
   <a href="/archives"><span class="fa fa-anchor"></span></a>

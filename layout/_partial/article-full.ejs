@@ -1,35 +1,33 @@
-<div class="article">
-  <article class="han-init-context">
-    <h1 class="title">
-      <span class="icon icon-eva-NERV"></span>
-      <span>
-        <%= page.title || theme.default_post_title || "Untitled" %>
-      </span>
-      <%- partial('_partial/fav', { page: page })%>
+<article class="han-init-context">
+  <h1 class="title">
+    <span class="icon icon-eva-NERV"></span>
+    <span>
+      <%= page.title || theme.default_post_title || "Untitled" %>
+    </span>
+    <%- partial('_partial/fav', { page: page })%>
 
-    </h1>
-    <div class="info">
-      <span class="categories">
-        <% if (page.categories && page.categories.length) { %>
-          <%- partial('_partial/article-categories', { page: page }) %>
-        <% } %>
-      </span>
-      <span class="tags">
-        <% if (page.tags && page.tags.length) { %>
-          <%- partial('_partial/article-tags', { page: page }) %>
-        <% } %>
-      </span>
+  </h1>
+  <div class="info">
+    <span class="categories">
+      <% if (page.categories && page.categories.length) { %>
+        <%- partial('_partial/article-categories', { page: page }) %>
+      <% } %>
+    </span>
+    <span class="tags">
+      <% if (page.tags && page.tags.length) { %>
+        <%- partial('_partial/article-tags', { page: page }) %>
+      <% } %>
+    </span>
+  </div>
+  <hr>
+  <div class="content">
+    <%- page.content %>
+  </div>
+  <% if (type == 'post') { %>
+    <div class="end">
+      <div><%= config.author %></div>
+      <div><%= _p('article.date', page.date.get('year'), page.date.get('month')+1, page.date.get('date')) %></div>
     </div>
-    <hr>
-    <div class="content">
-      <%- page.content %>
-    </div>
-    <% if (type == 'post') { %>
-      <div class="end">
-        <div><%= config.author %></div>
-        <div><%= _p('article.date', page.date.get('year'), page.date.get('month')+1, page.date.get('date')) %></div>
-      </div>
-    <% } %>
-  </article>
-</div>
+  <% } %>
+</article>
 <script type="text/javascript" src="/js/manga.js" async></script>

@@ -12,6 +12,8 @@ $title-font : 56px;
 $list-font : 28px;
 $timeline-font : 20px;
 
+$article-max-width: 600px;
+
 /*=====  End of variables  ======*/
 
 
@@ -200,23 +202,23 @@ hr {
     margin: 12px 0;
 }
 
+
+
 article {
+    div.two.images {
+        p {
+            display: inline-block;
+            width: $article-max-width / 2 - 4px;
+        }
+    }
+
     img, canvas {
         display: block;
         margin: 0 auto;
     }
-    .footnotes {
-        font-size: 12px;
 
-        .footnotes-list li p {
-            margin: 0;
-        }
-    }
-}
-
-.article {
     margin: 12px auto;
-    max-width: 600px;
+    max-width: $article-max-width;
     a {
         color: $theme-color;
     }
@@ -251,6 +253,17 @@ article {
     .end {
         text-align: right;
         color: #603e25;
+    }
+
+    .footnotes {
+        font-size: 12px;
+
+        .footnotes-list li p {
+            margin: 0;
+        }
+    }
+    p {
+        text-indent: 2em;
     }
 }
 
@@ -338,8 +351,14 @@ article {
         }
     }
 
-    .article {
+    article {
         width: 90%;
+
+        div.two.images {
+            p {
+                width: 100%;
+            }
+        }
     }
 
     .tagcloud {
